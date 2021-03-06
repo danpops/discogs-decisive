@@ -1,5 +1,5 @@
 # DiscogsDecisive
-Generate at random **three albums** from your vinyl collection on Discogs to help you decide what to listen to. Just tell me the genre you want...
+Generate at random **three albums** from your Discogs vinyl collection to help you decide what to listen to next! All you need to do is tell me what genre you are craving...
 
 Trust me. As a record collector for 10 years now, I find myself being indecisive when choosing what to listen to next! Luckily, Python and Discogs made it a little easier for us all.
 
