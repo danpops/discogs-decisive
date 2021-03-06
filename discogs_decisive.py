@@ -80,7 +80,6 @@ def generate_albums(genre_selection):
                     genre_selected_albums.append(row)
 
     # randomly select THREE albums from user selected category
-    five_random_albums = []
     i = 1
     while i <= 3:
         choice = random.choice(genre_selected_albums)
