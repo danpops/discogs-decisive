@@ -13,7 +13,7 @@ except ImportError:
     colored = None
 
 
-def cli_print(string, color, font="slant", figlet=False):
+def cli_print(string, color, font="chunky", figlet=False):
     if colored:
         if not figlet:
             six.print_(colored(string, color))
@@ -25,7 +25,7 @@ def cli_print(string, color, font="slant", figlet=False):
 
 def generate_albums(genre_selection):
     # INPUT YOUR DISCOGS USER TOKEN!
-    discogs_user_token = "INPUT TOKEN HERE"
+    discogs_user_token = ""
     if discogs_user_token == "":
         exit("Please input your user token.")
 
@@ -80,6 +80,7 @@ def generate_albums(genre_selection):
                     genre_selected_albums.append(row)
 
     # randomly select THREE albums from user selected category
+    five_random_albums = []
     i = 1
     while i <= 3:
         choice = random.choice(genre_selected_albums)
@@ -98,17 +99,18 @@ def main():
     collection. Python and Discogs made it a little easier.
     Happy collecting :)
     """
-    cli_print("DiscogsDecisive", color="green", figlet=True)
-    cli_print("*-----------------------------------------------------------------------*", "blue")
-    cli_print("*----------------* deciding what to spin next is hard. *----------------*", "blue")
-    cli_print("*------------*  when you don't know what to pick, we do. *--------------*", "blue")
-    cli_print("*-----------------------------------------------------------------------*", "blue")
+    cli_print("*-----------------------------------------------------------*", "blue")
+    cli_print("__discogs decisive__", color="green", figlet=True)
+    cli_print("*-----------------------------------------------------------*", "blue")
+    cli_print("*----------* deciding what to spin next is hard. *----------*", "blue")
+    cli_print("*-------*  when you don't know what to pick, we do. *-------*", "blue")
+    cli_print("*-----------------------------------------------------------*", "blue")
     cli_print("", color="green", figlet=True)
 
     questions = [
         inquirer.List(
             "genre_pick",
-            message="What genre do you want to listen to?",
+            message="Pick the genre you want to listen to [use arrow keys]",
             choices=["Rock", "Hip Hop", "Electronic", "Jazz", "Other"],
         ),
     ]
@@ -116,11 +118,11 @@ def main():
     answers = inquirer.prompt(questions)
     genre = answers.get('genre_pick')
 
-    cli_print("Hang tight! We're grabbing that for you.", "green")
+    cli_print("Hang tight! We're grabbing your three records...", "green")
 
     generate_albums(genre)
     print()
-    cli_print("Happy Collecting :)", "green")
+    cli_print("Happy collecting :)", "green")
 
 
 if __name__ == "__main__":
