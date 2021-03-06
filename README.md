@@ -25,8 +25,6 @@ python3 discogs_decisive.py
 
 3 randomly selected album/artist will appear.
 
-Happy collecting :)
-
 ## Usage
 
 I use this script to help me pick what record to spin next when I can't decide. 
