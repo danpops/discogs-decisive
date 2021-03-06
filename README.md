@@ -1,4 +1,4 @@
-# discogs-decisive
+# DiscogsDecisive
 Generate 3 random albums from your collection to listen to, categorized by genre.
 
 Trust me. As a record collector for the past 10 years, I find myself having trouble to decide what to listen to next! Luckily, Python and Discogs made it a little easier for all of us.
