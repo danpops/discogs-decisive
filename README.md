@@ -9,7 +9,7 @@ Trust me. As a record collector for 10 years now, I find myself being indecisive
 
 Log into your Discogs account and generate a user token at https://www.discogs.com/settings/developers 
 
-After you generate a token, input your token on line 9 of the script.
+After you generate a token, input your token on line 28 of the script.
 
 Next, install discogs_client, six, pyfiglet, and inquirer via pip3
 
